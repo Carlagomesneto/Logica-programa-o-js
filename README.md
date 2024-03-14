@@ -28,7 +28,7 @@ console.log(`Reatribuindo e dividindo por 10: ${numero/=10}`);
 console.log(`Reatribuindo para o resto da divisão por 10: ${numero %=10}`);
 console.log(`O numero final é igual a ${numero}`);
 console.log(`Incrementando o número em 1: ${++numero}`);
-console,log(`crementando o número em 1: ${--numero}`)
+console,log(`crementando o número em 1: ${--numero}`);
 ~~~
 
 
