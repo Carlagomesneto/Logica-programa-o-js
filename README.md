@@ -38,9 +38,42 @@ Operadores de atribuição:
 *`-`-> atribuição com subtração
 *`*`-> atribuição com multiplicação
 *`/`-> atribuição com divisão
-*`%`-> atribuição com resto da divisão
-* `++` -> atribuição com **incremento 1**  (pode ser *pré* ou *pós* incremento ). Ex:`numero++` (pós-incremento) ou `++ numero` (pré-incremento)
-* `--` -> atribuição com **decremento 1** (pode ser *pré* ou *pós* decremento). Ex: `numero--` (pós-decremento) ou `--numero` (pré-decremento)
+*`%=`-> atribuição com resto da divisão
+* `++` -> atribuição com **incremento 1**  (pode ser *pré* ou *pós* incremento ). Ex:`numero++` (pós-incremento) ou `++ numero` (pré-incremento).
+* `--` -> atribuição com **decremento 1** (pode ser *pré* ou *pós* decremento). Ex: `numero--` (pós-decremento) ou `--numero` (pré-decremento).
+
+## operadores-comparacao.js
+
+Nesta arquivo conhecemos os operadores de comparação e a estrutura lógica de decisão **if-else**.
+
+~~~js
+if (condicao) {
+    console.log(`VERDADEIRO`);
+} else {
+    console.log(`FALSO`);
+}
+~~~
+
+Esta estrutura exibe no console se a condição testada é `true` (verdadeira) ou `false` (falsa). A condição armazena o resulatado da **comparação entre duas variáveis**, como segue:
+
+~~~js
+
+const a  = 'a', b = 'A';
+const condicao = a == b;
+~~~
+
+### Opeadores de comparação:
+
+* `==` -> é igual
+* `!=` -> não é igual
+* `>` -> maior que
+* `<` -> menor que
+* `>=` -> maior OU igual
+* `<=` -> menor OU igual
+* `===` -> é estritamente igual (valor **E** tipo)
+* `!==` -> não e estritamente igual(valor **OU** tipo)
+
+
 
 
 
@@ -58,3 +91,32 @@ Em cada uma das operações, temos um operador aritmético :
 *`*`-> multiplicação
 *`/`-> divisão
 *`%`-> resto da divisão
+
+
+
+Escreva uma código em JavaScript que resolva o problema  descrito no 
+livro **Lógica de Programação I, p.20**, em que temos que obter as
+ 3 notas de um aluno, calcular a média e exibir se o aluno foi
+ aprovado, reprovado ou se ficou para exame. Não é necessário ler as notas,
+ você pode defini-las com variáveis.
+
+ Você precisará utlilizaruma estrutura de decisão composta, como a seguir:
+
+~~~js
+if(condicao1) {
+    // código da condição 1 
+} else if (condicao2) {
+    //código da condi
+}
+else {
+    // código se nenhum das condições for verdadeira
+}
+~~~
+
+
+
+
+ 
+
+
+
