@@ -119,4 +119,29 @@ else {
  
 
 
+# Fórmula 
+
+De      | Para | Fórmula
+    --- |  ----|--- 
+Celsuis | Fahrenheit | tF= (tC * 9/5) + 32
+Celsuis | Kelvin     | tK= tC - 273.15
+Fahrenheit | Celsuis | tºC = (tF - 32)*5/9
+Fahrenheit | kelvin  | tK = (tF + 459.76)*5/9
+Kelvin     | Celsuis | tC = tK + 273.15
+kevin      | Fahrenheit | tF = tk * 9/5 - 459.67
+
+Problema adicional 
+
+Como executa dois "programa" na mesma página?
+
+
+
+
+
+
+
+
+ 
+
+
 
