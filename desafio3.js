@@ -25,4 +25,11 @@
     console.log('Fahrenheit -> Celsius');
 } else if ((e1 == 'F' || e1 == 'c') && (e2 == 'C' || e2 == 'c')) {
     console.log(' Celsuis -> Fahrenheit');
+
 }
+
+
+
+
+
+
