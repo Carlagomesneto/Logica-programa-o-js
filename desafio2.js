@@ -6,6 +6,7 @@ function calculaIMC() {
             altura = window.prompt('Digite sua altura:'),
             imc = peso / altura ** 2;
         const imc = peso / altura ** 2;
+        
         let mensagem;
     
         if (imc < 18.5) {
@@ -37,4 +38,4 @@ function calculaIMC() {
     
     }
       
-}  
+}

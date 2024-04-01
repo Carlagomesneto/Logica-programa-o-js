@@ -78,3 +78,6 @@ Desenvolva um programa que calcule esses indicadores, obtendo, para isso, o núm
 * taxa de mortalidade: número de óbitos x 1000 / número de habitantes
 
 O usuário deve optar entre [N] Taxa de Natalidade e [M] Taxa de Mortalidade. O resultado exibido deve estar de acordo com a opção selecionada.
+
+Atividades:
+

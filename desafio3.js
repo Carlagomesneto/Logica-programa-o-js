@@ -1,35 +1,49 @@
- let  = parseFloat(window.prompt('Digite a temperatura'))
+document.querySelector('#btCalcIMC').addEventListener('click', function () {
+    const peso = document.querySelector('#peso').value;
+    const altura = document.querySelector('#altura').value;
+    const imc = calculaIMC(peso, altura);
+    console.log(imc);
 
-// parseFloat() -> converte texto para tipo numbre com ponto decimal
-// parseInt() -> converte texto para tipo numbre inteiro
+    // (parte de dentro do HTML) -> innerHTML
 
- window.alert(`A temperatura convertida é ${temperatura}`)
- console.log(typeof(temperatura));
+    document.querySelector('#resultadoIMC').innerHTML = imc;
 
- 
+});
+document.querySelector('#btLimpaIMC').addEventListener('click', function () {
+    document.querySelector('#resultadoIMC').innerHTML = '';
 
+});
+// Fim desafio 2
 
+// Início Desafio 3
 
+document.querySelector('#btConverteTemp').addEventListener('click', function () {
 
+    const temperaturaAtual = document.querySelector('#valorTemperatura').value; 
+    const escalaAtual = document.querySelector('#escalaAtual').value;
+    const escalaConvertida = document.querySelector('#escalaConvertida').value;
+    const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConvertida);
+    document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
+});
 
+document.querySelector('#btLimpaTemp').addEventListener('click', function () {
+    document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.
+        temperaturaConvertida + conversao.escalaConversao}`;
 
- const temperatura = parseFloat(window.prompt('Digite a temperatura'));
- const escalaAtual = window.prompt('Digite a escala atual').toUpperCase();
+});
 
- let e1 = 'F', e2 = 'f';
-
- e1 = e1.toLocaleUpperCase();
- e2 = e2.toLocaleUpperCase();
-
- if (e1 == 'F' && e2 == 'k' || e2 == 'k'){
-    console.log('Fahrenheit -> Celsius');
-} else if ((e1 == 'F' || e1 == 'c') && (e2 == 'C' || e2 == 'c')) {
-    console.log(' Celsuis -> Fahrenheit');
-
-}
-
-
-
-
+// Fim Desafio 3
 
 
+// incio Desafio 3
+
+const A = A < (ladoB + ladoC)
+const B = B < (ladoA + ladoC)
+const C = C < (ladoA + ladoB)
+
+if ( B< )
+
+
+
+
+// desafio Desconto Funcionário
