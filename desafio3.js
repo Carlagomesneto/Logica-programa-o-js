@@ -23,7 +23,8 @@ document.querySelector('#btConverteTemp').addEventListener('click', function () 
     const escalaAtual = document.querySelector('#escalaAtual').value;
     const escalaConvertida = document.querySelector('#escalaConvertida').value;
     const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConvertida);
-    document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
+    document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida:
+     ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
 });
 
 document.querySelector('#btLimpaTemp').addEventListener('click', function () {
@@ -35,15 +36,3 @@ document.querySelector('#btLimpaTemp').addEventListener('click', function () {
 // Fim Desafio 3
 
 
-// incio Desafio 3
-
-const A = A < (ladoB + ladoC)
-const B = B < (ladoA + ladoC)
-const C = C < (ladoA + ladoB)
-
-if ( B< )
-
-
-
-
-// desafio Desconto Funcionário
