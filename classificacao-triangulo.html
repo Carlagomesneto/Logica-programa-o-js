@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-BR">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classificação de um triângulo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Classificação de um triângulo</h1>
     <a href="index.html">↩Home</a>
+    <h1>Classificação de um triângulo</h1>
 
     <form action=".">
-
+        <div class="controle-fron">
         <label for="ladoA">Lado A:</label>
         <input type="number" id = "ladoA " min ="0">
+        </div>
 
+        <div class="controle-fron">
         <label for="ladoA">Lado B:</label>
         <input type="number" id = "ladoB" min ="0">
+        </div>
 
+        <div class="controle-fron">
         <label for="ladoA">Lado C:</label>
         <input type="number" id = "ladoC" min ="0">
-
-        <button type="button">Classificação</button>
-        <button type="reset">limpar</button>
+        </div>
+<!-- nao precisa. so no input -->
+    
+        <button type="button" id ="btClassificar">Classificar</button>
+        <button type="reset" id="btLimpar">limpar</button>
+        
 
         </form>
 
@@ -30,7 +38,8 @@
 
         <script>
 
-            document.querySelector('#btClassificar').addEventListener('click',() => { // arrow function
+            document.querySelector('#btClassificar').addEventListener('click',() => {
+                 // arrow function
 
                 // atribuindo e fazendo o casting
                 const ladoA = Number(document.querySelector('#ladoA').
@@ -44,14 +53,17 @@
 
                 document.querySelector('resultado').innerHTML=
                 classificacao;
-                console.log(typeof(ladoA),typeof(ladoB),typeof(ladoC) classificacao);
+                console.log(typeof(ladoA),typeof(ladoB),typeof(ladoC),classificacao);
+
+                
             })
+
+            document.querySelector('#btlimpar').addEventListener('click',()=> {
+                document.querySelector('resultado').innerHTML='';
             
             
             console.log(classificaçãoTriangulo(14,15,13));
 
-            document.querySelector('#btlimpar').addEventListener('click', ()=> {
-                document.querySelector('resultado').innerHTML='';
             })
 
             function classificaçãoTriangulo(ladoA,LadoB,LadoC) {
@@ -82,7 +94,7 @@
 
             } else {
 
-                mensagemErro = '    A forma não é um triangulo';
+                mensagemErro = 'A forma não é um triangulo';
             }
                 
 
@@ -92,7 +104,7 @@
                 // ?? -> operador de coalescência
             }
         }
-
+    
         </script>
 
 </body>
