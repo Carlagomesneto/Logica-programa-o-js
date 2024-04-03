@@ -9,12 +9,28 @@ navegador*/
 :root { /* <html> */
     --fonte-geral: 'Ubuntu', sans-serif;
 }
+body{
+    background-color: rgb(239, 216, 227);
+}
+H1{
+    color: rgb(69, 55, 71);
+    padding: 1rem;
+}
+button{
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
 
 .elementos-em-linha {
     display: flex;
     justify-content: space-between;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    
 }
 
 form {
     width: 600px;
+    
 }
