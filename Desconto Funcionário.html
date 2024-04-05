@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>funcionários</title>
+
+
+
+
 </head>
+
 <body>
-   <h1>funcionários </h1>
+    <h1>Loja</h1>
+    <form action="">
+
+        <label for="">valor</label>
+        
+        <input type="number" id="valor">
+
+        <label form="selecione">Você é</label>
+        <select id="selecione">
+            <option value="c">Cliente</option>
+            <option value="v">Vip</option>
+            <option value="f">Funcionário</option>
+
+        </select>
+
+        <button type="button" id="btCalcular">Calcular</button>
+
+        <button type="button" id="btLimpar">Limpar</button>
+    </form>
+    <script>
+        function aplicaDesconto(valor,selecione) {
+            let resultado;
+
+            if (selecione === 'f') {
+                resultado = `O desconto apilcado foi de ${valor * 0.1}`
+            } else {
+                resultado = 'Erro'
+            }
+        }
+        
+        document.querySelector('#btCalcular').addEventListener('click', ()=>{
+            const valor = document.querySelector('#valor').value;
+            const selecione = document.querySelector('#selecione').value;
+
+        })
+
+       
+
+    </script>
 
 
 </body>
+
 </html>
