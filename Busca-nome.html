@@ -9,43 +9,64 @@
     <form action="">
 
         <label for="nomeInclusao">Nome para incluir</label>
-        <input type="nomeInclusao">
+        <input type="nomeInclusao" >
 
-        <button type="button" id="btCadrastar">btCadrastar</button>
+        <button type="reset" id="btCadrastar">Cadrastar</button>
 
-        <button type="button" id="btMostar">btMostar</button>
+        <button type="button" id="btMostar">Mostar</button>
+
+       
 
     </form>
     
         <div id="resultado"></div>
 
     <script>
-
-        let i = 0;
+        
+        let nomes = []; // array vazio chamado "nomes"
 
         document.querySelector('#btCadrastar').addEventListener
         ('click', () => {
 
-            let nomes = [];
-            nome[i] = document.querySelector('#nomeInclusao').value;
+            if (nomes.length < 10){
 
-            i++;
+                nomes.push (document.querySelector('#nomeInclusao').value);
+            } else{
 
-        })
+              if (nomes.includes(querySelector('#nomeInclusao').value)){
+
+                console.log('ACHEI')
+              }else
+
+              console.log(' NÃO ACHEI');
+            }
+
+            
+            nomes.push (document.querySelector('#nomeInclusao').value);
+    
+    
+
+        });
 
         document.querySelector('btMostrar').addEventListener('click',() => {
 
             for (let i = 0; i < nomes.length; i++) {
 
-                document.querySelector('#resultado').innerHTML = new Promise((resolve, reject) => {
-                    [i];
-                })
+                document.querySelector('#resultado').innerHTML += 
+                    nomes[i] + '<br>';
+                }
 
-               
-            }
+            
+        
+            
+              
+        });
 
-        })
-
+        // TODO:
+        // 1. Ao clicar em cadrastar, limpar o input
+        // 2. Limitar a 10 nomes
+        // 3. Após o 10º nome, o campo permite buscar um nome no array
+        // 4. Exibir se o nome foi encontrado
     </script>
 </body>
 </html>
