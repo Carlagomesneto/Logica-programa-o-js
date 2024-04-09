@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    font-family: 'Ubuntu';
+}
+
+.titulo-pagina{
+    width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+main{
+    width: 800px;
+    border-width: 1px;
+    border-style: black;
+    border-color: black;
+    margin: auto;
+    padding: 2rem;
+    background-color: antiquewhite;
+}
+
+.elementos-em-linha{
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+}
+
+button{
+    width: 100%;
+    line-height: 2.2;
+}
+
+input{
+    width: 100%;
+    line-height: 2.2;
+}
+
+#resultado{
+    border: 1px solid black;
+    height: 2rem;
+    margin: 2rem 0 0 0;
+    border-radius: 4px;
+}

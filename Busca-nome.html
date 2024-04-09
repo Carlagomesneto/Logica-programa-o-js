@@ -1,65 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+    </style>
+    
 </head>
 <body>
     <form action="">
 
         <label for="nomeInclusao">Nome para incluir</label>
-        <input type="nomeInclusao" >
+        <input type="nomeInclusao" id="nome" required autofocus>
 
         <button type="reset" id="btCadrastar">Cadrastar</button>
 
-        <button type="button" id="btMostar">Mostar</button>
-
-       
+        <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
 
     </form>
     
         <div id="resultado"></div>
 
     <script>
+
+        document.addEventListener('keydowm', (evento) => {
+
+            if (evento.key === 'Entre') {
+                
+                evento.preventDefault();
+
+                if (nomes.length < 10) {
+
+                    document.querySelector('#btCadastrar').click ();
+
+
+                }else {
+
+                    document.querySelector('#btPesquisar').click();
+
+                }
+            }
+
+        });
         
         let nomes = []; // array vazio chamado "nomes"
 
         document.querySelector('#btCadrastar').addEventListener
         ('click', () => {
+            // ao atingir 10 nomes...
+            if (nomes.length === 10) {
+                // Troque a label do imput "nome"
+                document.querySelector('label [for="nome"]').innerHTML
+                 ='Nome para pesquisar';
+                // Oculte o botão cadastrar
+                 document.querySelector('#btCadastrar').classList.add('oculto');
+                // Desoculte o botão pesquisar
+                 document.querySelector('#btPesquisar').classList.remove('oculto');
 
-            if (nomes.length < 10){
 
-                nomes.push (document.querySelector('#nomeInclusao').value);
-            } else{
-
-              if (nomes.includes(querySelector('#nomeInclusao').value)){
-
-                console.log('ACHEI')
-              }else
-
-              console.log(' NÃO ACHEI');
             }
 
             
             nomes.push (document.querySelector('#nomeInclusao').value);
     
-    
-
         });
 
         document.querySelector('btMostrar').addEventListener('click',() => {
 
-            for (let i = 0; i < nomes.length; i++) {
-
-                document.querySelector('#resultado').innerHTML += 
-                    nomes[i] + '<br>';
-                }
-
-            
         
+        });
+
             
-              
+
+                document.querySelector('#btPesquisar').addEventListener
+                ('click', () => {
+                    
+                    const nomeBuscado = document.querySelector('#nome').value;
+                    // condições alternativa: (nomes.indexOf(nomeBuscado) >= 0)
+                    if (nomes.includes(nomeBuscado)) {
+
+                        document.querySelector('#resultado').innerHTML = 'ACHEI'
+
+                    } else {
+
+                        document.querySelector('#resultado').innerHTML = 'NÃO ACHEI'
+                    }
+
+            
+
+                 
         });
 
         // TODO:
