@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classificação de um triângulo</title>
@@ -9,98 +10,111 @@
 </head>
 
 <body>
+
+    <a href="index.html">↩Home</a>
+    <h1 class="titulo-pagina">Classificação de um triângulo</h1>
+
+
     <main>
-    <a href="index.html"> <H1>↩Home</H1></a>
-    <h1>Classificação de um triângulo</h1>
-</main>
-    <form action=".">
-        <div class="controle-fron">
-        <label for="ladoA">Lado A:</label>
-        <input type="number" id = "ladoA " min ="0">
-        </div>
-    
 
-        
-        <div class="controle-fron">
-        <label for="ladoA">Lado B:</label>
-        <input type="number" id = "ladoB" min ="0">
-        </div>
 
-        <div class="controle-fron">
-        <label for="ladoA">Lado C:</label>
-        <input type="number" id = "ladoC" min ="0">
-        </div>
-    
-        <button type="button" id ="btClassificar">Classificar</button>
-        <button type="reset" id="btLimpar">limpar</button>
-        
+        <form action=".">
+
+            <div class="elementos-em-linha">
+
+                <div class="controle-form">
+                    <label for="ladoA">Lado A:</label>
+                    <input type="number" id="ladoA" min="0">
+                </div>
+
+                <div class="controle-form">
+                    <label for="ladoA">Lado B:</label>
+                    <input type="number" id="ladoB" min="0">
+                </div>
+
+                <div class="controle-form">
+                    <label for="ladoA">Lado C:</label>
+                    <input type="number" id="ladoC" min="0">
+                </div>
+
+            </div>
+
+            <div class="botoes">
+
+                <button type="button" id="btClassificar">Classificar</button>
+                <button type="reset" id="btLimpar">limpar</button>
+
+            </div>
 
         </form>
 
         <div id="resultado"></div>
 
+    </main>
 
-        <script>
+    <script>
 
-            document.querySelector('#btClassificar').addEventListener('click',() => {
-                 // arrow function
+        document.querySelector('#btClassificar').addEventListener('click', () => {
+            // arrow function
 
-                // atribuindo e fazendo o casting
-                const ladoA = Number(document.querySelector('#ladoA').
-                value);
-                const ladoB = Number(document.querySelector('#ladoB').
-                value);
-                const ladoC = Number(document.querySelector('#ladoC').
+            // atribuindo e fazendo o casting
+            const ladoA = Number(document.querySelector('#ladoA').
                 value);
 
-                const classificacao = classificaçãoTriangulo(ladoA,ladoB,ladoC);
+            const ladoB = Number(document.querySelector('#ladoB').
+                value);
 
-                document.querySelector('resultado').innerHTML=
+            const ladoC = Number(document.querySelector('#ladoC').
+                value);
+
+            const classificacao = classificaçãoTriangulo(ladoA, ladoB, ladoC);
+
+            document.querySelector('resultado').innerHTML =
                 classificacao;
-                console.log(typeof(ladoA),typeof(ladoB),typeof(ladoC),classificacao);
-
-                
-            })
-
-            document.querySelector('#btlimpar').addEventListener('click',()=> {
-                document.querySelector('resultado').innerHTML='';
-            
-            
-            console.log(classificaçãoTriangulo(14,15,13));
-
-            })
-
-            function classificaçãoTriangulo(ladoA,LadoB,LadoC) {
-
-                let mensagemErro; tipoTriangulo;
+            console.log(typeof (ladoA), typeof (ladoB), typeof (ladoC), classificacao);
 
 
-                //teste do triangulo
-                if(ladoA < (LadoB + LadoC) && LadoB < (ladoA + LadoC) &&
-                LadoC <(ladoA + LadoB)) {
+        })
+
+        document.querySelector('#btlimpar').addEventListener('click', () => {
+            document.querySelector('resultado').innerHTML = '';
+
+
+            console.log(classificaçãoTriangulo(14, 15, 13));
+
+        })
+
+        function classificaçãoTriangulo(ladoA, LadoB, LadoC) {
+
+            let mensagemErro; tipoTriangulo;
+
+
+            //teste do triangulo
+            if (ladoA < (LadoB + LadoC) && LadoB < (ladoA + LadoC) &&
+                LadoC < (ladoA + LadoB)) {
 
                 // classificação
 
                 if (ladoA === LadoB && LadoB === LadoC) {
- 
-                    tipoTriangulo= 'Equilátero';
+
+                    tipoTriangulo = 'Equilátero';
 
 
                 } else if (ladoA === LadoB || LadoB === LadoC ||
                     ladoA === LadoC) {
 
-                
-                   tipoTriangulo = 'Isósceles';
 
-                   tipoTriangulo = 'Escaleno';
+                    tipoTriangulo = 'Isósceles';
 
-                   // fim classificação
+                    tipoTriangulo = 'Escaleno';
 
-            } else {
+                    // fim classificação
 
-                mensagemErro = 'A forma não é um triangulo';
-            }
-                
+                } else {
+
+                    mensagemErro = 'A forma não é um triangulo';
+                }
+
 
                 // fim do teste do triangulo
 
@@ -108,8 +122,9 @@
                 // ?? -> operador de coalescência
             }
         }
-    
-        </script>
+
+    </script>
 
 </body>
+
 </html>
