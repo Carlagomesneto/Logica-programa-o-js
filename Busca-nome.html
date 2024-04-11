@@ -3,27 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Busca nome</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
     <style>
 
+        .oculto {
+            display:none;
+        }
+
+        .acao-alternativa {
+            background-color: #29de2f;
+        }
+
+        .acao-alternativa:hover {
+            background-color: #5cf561;
+        }
+
+        .acao-alternativa:active {
+            background-color: #2adf30;
+        }
+
     </style>
-    
 </head>
 <body>
-    <form action="">
+    
+    <main>
 
-        <label for="nomeInclusao">Nome para incluir</label>
-        <input type="nomeInclusao" id="nome" required autofocus>
+      <form action="">
 
-        <button type="reset" id="btCadrastar">Cadrastar</button>
+        <div class="controle-form">
+        <label for="nome">Nome para incluir</label>
+        <input type="Nome para incluir" id="nome" required autofocus>
+        </div>
 
-        <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
+    <div class="botoes">
+        <button type="reset" id="btCadastrar" 
+        class="acao-positiva">Cadastrar</button>
 
-    </form>
+        <button type="button" id="btPesquisar"
+         class="oculto acao-alternativa">Pesquisar</button>
+    </div>
+
+     </form>
     
         <div id="resultado"></div>
 
+    </main>
+
     <script>
+
+        let nomes = []; // array vazio chamado "nomes"
 
         document.addEventListener('keydowm', (evento) => {
 
@@ -45,14 +77,17 @@
 
         });
         
-        let nomes = []; // array vazio chamado "nomes"
+     
 
-        document.querySelector('#btCadrastar').addEventListener
+        document.querySelector('#btCadastrar').addEventListener
         ('click', () => {
+            
+            nomes.push(document.querySelector('#nome').value);
+            
             // ao atingir 10 nomes...
             if (nomes.length === 10) {
                 // Troque a label do imput "nome"
-                document.querySelector('label [for="nome"]').innerHTML
+                document.querySelector('label[for="nome"]').innerHTML
                  ='Nome para pesquisar';
                 // Oculte o botão cadastrar
                  document.querySelector('#btCadastrar').classList.add('oculto');
@@ -63,14 +98,10 @@
             }
 
             
-            nomes.push (document.querySelector('#nomeInclusao').value);
     
         });
 
-        document.querySelector('btMostrar').addEventListener('click',() => {
-
         
-        });
 
             
 
@@ -78,14 +109,18 @@
                 ('click', () => {
                     
                     const nomeBuscado = document.querySelector('#nome').value;
+
+
                     // condições alternativa: (nomes.indexOf(nomeBuscado) >= 0)
                     if (nomes.includes(nomeBuscado)) {
 
-                        document.querySelector('#resultado').innerHTML = 'ACHEI'
+                        document.querySelector('#resultado').innerHTML =
+                        `ACHEI na posição${nomes.indexOf(nomeBuscado)}, 
+                        ${nomes[nome.indeOf(nomeBuscado)]}`;
 
                     } else {
 
-                        document.querySelector('#resultado').innerHTML = 'NÃO ACHEI'
+                        document.querySelector('#resultado').innerHTML = 'NÃO ACHEI';
                     }
 
             
