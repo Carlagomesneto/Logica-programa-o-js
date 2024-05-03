@@ -1,11 +1,17 @@
 //<a> do Home
-const aHome = document.createElement('a'); 
-aHome.setAttribute('href','/exercicios/index.html');
-aHome.innerHTML = 'Home';
+const aHome = criaAncora('/index.html', 'Home');
 
-// <li> do exercicio 1
-const liHome = document.createElement('li');
-liExercicio6.appendChild(aExercicio6);
+
+// <li> do home
+const liHome = criaLi(aHome);
+
+// <a> do exercicio 1 
+const aExercicio1 = criaAncora('/exercicios/exercicio1.html', 'Exerc.1');
+
+
+// <li> do exercicio 1 
+const liExercicio1 = criaLi (aExercicio1);
+
 
 // <a> do exercicio 6 
 const aExercicio6 = document.createElement('li');
@@ -53,3 +59,13 @@ linkNavbar.setAttribute('href','/css/navBar.css');
 document.body.insertAdjacentElement('afterbegin', nav);
 
 document.head.appendChild(linkNavbar);
+
+
+
+// Crie uma função e a utilize para gerar os elementos do tipo <li>
+function criaLi(ancora) {
+    const li = document.createElement('li');
+    li.appendChild(ancora);
+
+    return li;
+}
