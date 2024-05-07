@@ -8,7 +8,7 @@ navegador*/
 }
 body {
     font-family: 'Ubuntu',sans-serif;
-    background-color: beige;
+    background-color: rgb(213, 231, 182);
     margin: 6rem;
     border-radius:7px ;
     
@@ -24,13 +24,13 @@ body {
 
 main {
     width: 700px;
-    border-width: 6px;
+    border-width: 7px;
     border-style: black;
     border-color: black;
-    border: 2px solid black;
+    border: 3px solid black;
     margin: auto;
     padding:2rem;
-    background-color: antiquewhite;
+    background-color: rgb(151, 237, 154);
     border-radius: 6px;
 }
 
@@ -73,7 +73,7 @@ button:active {
 }
 
 input {
-    width: 80%;
+    width: 35%;
     line-height:2.2;
     border-radius: 6px;
     border: 2px solid #0000;
@@ -102,8 +102,8 @@ button{
 }
 
 #btClassificar {
-    background-color: #4a19b2;
-    color: #ffff;
+    background-color: #713be6;
+    color: #439dec;
     border: none;
     border-radius: 5px;
     margin: 1rem;
@@ -111,21 +111,21 @@ button{
 }
 
 #btClassificar:hover {
-    background-color: #4316a4;
+    background-color: #6e37e6;
     cursor: pointer
 }
 
 #btLimpar {
-    background-color: #e85391;
-    color: #ffffff;
+    background-color: #a1de56;
+    color: #d3dfbb;
 }
 
 #btLimpar :hover {
-    background-color: #e85391;
+    background-color: #49ac71;
 }
 
 #btLimpar :active {
-    background-color: #e85391;
+    background-color: #a4e897;
 }
 
 
