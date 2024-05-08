@@ -8,9 +8,7 @@ navegador*/
 }
 body {
     font-family: 'Ubuntu',sans-serif;
-    background-color: rgb(213, 231, 182);
-    margin: 6rem;
-    border-radius:7px ;
+    background-color: rgb(239, 214, 233);
     
 }
 
@@ -24,20 +22,19 @@ body {
 
 main {
     width: 700px;
-    border-width: 7px;
-    border-style: black;
-    border-color: black;
-    border: 3px solid black;
+    border: 1px solid black;
     margin: auto;
     padding:2rem;
-    background-color: rgb(151, 237, 154);
-    border-radius: 6px;
+    background-color: rgb(225, 183, 236);
+    border-radius: 6px; 
+    box-shadow: 4px 4px 4px #888;
+
 }
 
 .elementos-em-linha {
     display: flex;
     justify-content: space-between;
-    gap:2rem;
+    gap: 1rem;
 }
 
 .botoes {
@@ -50,18 +47,30 @@ input {
     width:20%;
     line-height: 2.2;
     border-radius: 6px;
+    border: 1px solid #000000;
+    padding-left: 8px;
+    margin-top: 8px;
 }
-
+#resultado {
+    border: 1px solid black;
+    height: 2rem;
+    margin: 2rem 0 0 0;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row; /* estabelece a direção de alinhamento */
+    justify-content: center; /* alinha no eixo principal */
+    align-items: center; /* alinha no eixo secundário */
+    gap: 1rem;
+}
 
 button {
     width: 10%;
+    height: 2.6rem;
     line-height: 2.2;
-    border-radius: 6px;
-}
-
-button {
-   border: none;
-   border-radius: 5px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
 }
 
 button:hover {
@@ -71,61 +80,34 @@ button:hover {
 button:active {
     box-shadow: inset 1px 1px 1px #555;
 }
-
-input {
-    width: 35%;
-    line-height:2.2;
-    border-radius: 6px;
-    border: 2px solid #0000;
-    padding-left: 8px;
-    margin-top: 8px;
-    /* outline: none; */
+.acao-positiva {
+    background-color: #2078ec;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
-#resultado {
-    border: 2px solid black;
-    height: 2rem;
-    margin: 1rem 0 0 0;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: row; /*estabelece a direção de alinhamento */
-    justify-content: center; /* alinha no eixo principal */
-    align-items: center; /* alinha no eixo secundário */
+.acao-positiva:hover {
+    background-color: #2078ec;
 }
 
-button{
-    width: 20%;
-    line-height: 2.2;
-    margin: 1rem;
-
-
+.acao-positiva:active {
+    background-color: #1d6dd6;
 }
 
-#btClassificar {
-    background-color: #713be6;
-    color: #439dec;
-    border: none;
-    border-radius: 5px;
-    margin: 1rem;
-
+.acao-negativa {
+    background-color: #f19fc1;
+    color: #ffffff;
 }
 
-#btClassificar:hover {
-    background-color: #6e37e6;
-    cursor: pointer
+.acao-negativa:hover {
+    background-color: #e4a8c1;
 }
 
-#btLimpar {
-    background-color: #a1de56;
-    color: #d3dfbb;
+.acao-negativa:active {
+    background-color: #f568a3;
 }
 
-#btLimpar :hover {
-    background-color: #49ac71;
+.monetario::before {
+    content: "R$ ";
 }
-
-#btLimpar :active {
-    background-color: #a4e897;
-}
-
-

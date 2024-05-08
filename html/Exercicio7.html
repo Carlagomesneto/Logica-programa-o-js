@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+
+</head>
+
+<body>
+
+    <a href="/html/index.html" id="ancora"> Voltar </a>
+    
+    <h1>Taxa de Natalidade e Mortalidade</h1>
+    <section>
+
+
+        <div class="elementos-em-linha">
+
+
+            <label for="habitantes">Número de Habitantes:</label>
+            <input type="number" id="habitantes">
+
+            <label for="nascimentomortalidade">Número de nascimentos ou óbitos:</label>
+            <input type="number" id="nascimentomortalidade">
+
+            <label for="opcao">Escolha a opção:</label>
+            <select id="opcao">
+                <option value="N">Taxa de Natalidade</option>
+                <option value="M">Taxa de Mortalidade</option>
+            </select>
+
+        </div>
+
+        <div id="resultado"></div>
+
+        <div id="botoes">
+
+            <button id="btcalcula" onclick="calcularTaxa()">Calcular</button>
+            <button type="reset" id="btlimpa">Limpar</button>
+
+        </div>
+
+
+    </section>
+
+
+    <script src="/js/exercicio7.js"></script>
+    <script src="/jsnavbar.js"></script>
+
+   
+
+</body>
+
+</html>
